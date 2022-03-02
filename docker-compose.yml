@@ -2,7 +2,9 @@ squid_full:
   image: ubuntu/squid
   ports:
     - "3128:3128"
-#   volumes:
+  volumes:
+      - ./logs:/var/log/squid
+      - ./data:/var/spool/squid
 #     - ./squid.conf:/etc/squid/squid.conf
 #     - ./htpasswd:/etc/squid/squid_passwd
 #     - /srv/docker/squid/cache:/var/spool/squid
