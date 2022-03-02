@@ -1,17 +1,21 @@
-own_squid:
-  build: .
-  ports:
-    - "3128:3128"
-#   volumes:
-#       - ./logs:/var/log/squid
-#       - ./data:/var/spool/squid
-#     - ./squid.conf:/etc/squid/squid.conf
-#     - ./htpasswd:/etc/squid/squid_passwd
-#     - /srv/docker/squid/cache:/var/spool/squid
-  restart: always
-  environment:
-#       TZ: UTC
-    CFLAGS: " -Dbind=SOCKSbind "
-    CXXFLAGS: " -Dbind=SOCKSbind "
-    LDADD: " -lsocks "
-  command: /bin/bash -c "/usr/sbin/squid -sYC"
+version: '3.6'
+
+services:
+
+  own_squid:
+    build: .
+    ports:
+      - "3128:3128"
+  #   volumes:
+  #       - ./logs:/var/log/squid
+  #       - ./data:/var/spool/squid
+  #     - ./squid.conf:/etc/squid/squid.conf
+  #     - ./htpasswd:/etc/squid/squid_passwd
+  #     - /srv/docker/squid/cache:/var/spool/squid
+    restart: always
+    environment:
+  #       TZ: UTC
+      CFLAGS: " -Dbind=SOCKSbind "
+      CXXFLAGS: " -Dbind=SOCKSbind "
+      LDADD: " -lsocks "
+    command: /bin/bash -c "/usr/sbin/squid -sYC"
