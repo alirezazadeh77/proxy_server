@@ -1,4 +1,4 @@
-Squid_full:
+squid_full:
   build: .
   ports:
     - "3128:3128"
