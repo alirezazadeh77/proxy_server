@@ -14,7 +14,9 @@ RUN cat /etc/apt/sources.list | grep -v '^#' | sed /^$/d > sources.tmp.1 && \
     cat sources.tmp.1 sources.tmp.2 | sort -u > /etc/apt/sources.list && \
     rm -f sources.tmp.1 sources.tmp.2
 
-# RUN add-apt-repository --remove ppa:ehoover/compholio  
+RUN apt-get install software-properties-common
+
+RUN add-apt-repository --remove ppa:ehoover/compholio  
 
 RUN apt update -y
 
