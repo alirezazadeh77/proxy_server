@@ -1,6 +1,6 @@
 Squid:
   build: .
-  image: squid
+  image: squid_full
   ports:
     - "3128:3128"
   volumes:
