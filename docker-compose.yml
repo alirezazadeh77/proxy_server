@@ -18,4 +18,4 @@ services:
       CFLAGS: " -Dbind=SOCKSbind "
       CXXFLAGS: " -Dbind=SOCKSbind "
       LDADD: " -lsocks "
-    command: /bin/bash -c "/usr/sbin/squid -sYC"
+    command: /bin/bash -c "/usr/sbin/squid --foreground -sYC"
