@@ -1,4 +1,4 @@
 FROM ubuntu
 
 RUN apt-get update -y
-RUN apt-get install -y squid
+RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install -y squid
