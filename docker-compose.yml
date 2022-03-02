@@ -1,13 +1,14 @@
 squid_full:
-  image: sameersbn/squid:3.5.27-2
+  image: ubuntu/squid
   ports:
     - "3128:3128"
-  volumes:
-    - ./squid.conf:/etc/squid/squid.conf
-    - ./htpasswd:/etc/squid/squid_passwd
-    - /srv/docker/squid/cache:/var/spool/squid
+#   volumes:
+#     - ./squid.conf:/etc/squid/squid.conf
+#     - ./htpasswd:/etc/squid/squid_passwd
+#     - /srv/docker/squid/cache:/var/spool/squid
   restart: always
   environment:
-    CFLAGS: " -Dbind=SOCKSbind "
-    CXXFLAGS: " -Dbind=SOCKSbind "
-    LDADD: " -lsocks "
+      TZ: UTC
+#     CFLAGS: " -Dbind=SOCKSbind "
+#     CXXFLAGS: " -Dbind=SOCKSbind "
+#     LDADD: " -lsocks "
