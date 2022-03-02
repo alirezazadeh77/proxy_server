@@ -14,11 +14,11 @@ RUN cat /etc/apt/sources.list | grep -v '^#' | sed /^$/d > sources.tmp.1 && \
     cat sources.tmp.1 sources.tmp.2 | sort -u > /etc/apt/sources.list && \
     rm -f sources.tmp.1 sources.tmp.2
 
-RUN add-apt-repository --remove ppa:ehoover/compholio  
+# RUN add-apt-repository --remove ppa:ehoover/compholio  
 
-RUN apt update
+RUN apt update -y
 
-RUN apt update && \
+RUN apt update -y && \
     DEBIAN_FRONTEND=noninteractive apt build-dep -y squid && \
     DEBIAN_FRONTEND=noninteractive apt install -y wget tar xz-utils libssl-dev nano
 
