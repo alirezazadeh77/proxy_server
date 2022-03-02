@@ -1,4 +1,4 @@
 FROM ubuntu
 
-RUN apt update -y
-RUN apt install -y squid
+RUN apt-get update -y
+RUN apt-get install -y squid
