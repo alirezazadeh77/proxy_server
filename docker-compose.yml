@@ -7,3 +7,7 @@ Squid:
     - ./htpasswd:/etc/squid/squid_passwd
     - /srv/docker/squid/cache:/var/spool/squid
   restart: always
+  environment:
+    CFLAGS: " -Dbind=SOCKSbind "
+    CXXFLAGS: " -Dbind=SOCKSbind "
+    LDADD: " -lsocks "
