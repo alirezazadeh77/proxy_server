@@ -1,5 +1,5 @@
 
-FROM ubuntu:artful
+FROM pacur/ubuntu-artful
 
 ARG TRUST_CERT=
 
