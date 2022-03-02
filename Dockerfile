@@ -1,6 +1,5 @@
-ARG DOCKER_PREFIX=
 
-FROM ${DOCKER_PREFIX}ubuntu:artful
+FROM ubuntu
 
 ARG TRUST_CERT=
 
