@@ -1,5 +1,8 @@
 Squid:
-  image: wernight/squid
+  build: .
+  image: squid
   ports:
     - "3128:3128"
+  volumes:
+    - /srv/squid/cache:/var/cache/squid4
   restart: always
