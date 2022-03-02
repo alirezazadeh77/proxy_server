@@ -4,5 +4,6 @@ Squid:
     - "3128:3128"
   volumes:
     - ./squid.conf:/etc/squid/squid.conf
+    - ./htpasswd:/etc/squid/squid_passwd
     - /srv/docker/squid/cache:/var/spool/squid
   restart: always
