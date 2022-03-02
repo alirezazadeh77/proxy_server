@@ -14,4 +14,4 @@ own_squid:
     CFLAGS: " -Dbind=SOCKSbind "
     CXXFLAGS: " -Dbind=SOCKSbind "
     LDADD: " -lsocks "
-# command: /bin/bash -c ""
+command: /bin/bash -c "/usr/sbin/squid -sYC"
