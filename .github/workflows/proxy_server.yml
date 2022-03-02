@@ -1,0 +1,19 @@
+name: proxy_server
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - name: run docker 
+      run: |
+        docker-compose down 
+        git pull origin main
+        docker-compose up --build -d 
