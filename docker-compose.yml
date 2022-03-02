@@ -1,4 +1,4 @@
-Squid:
+Squid_full:
   build: .
   image: squid_full
   ports:
